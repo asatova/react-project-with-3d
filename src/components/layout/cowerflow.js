@@ -1,72 +1,64 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import './cowerflow.css';
 
-import slide_image_1 from './images/1.jpg';
-import slide_image_2 from './images/2.png';
-import slide_image_3 from './images/3.jpg';
-import slide_image_4 from './images/4.jpg';
-import slide_image_5 from './images/5.jpg';
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-function App() {
+export default function App() {
     return (
-        <div className="container">
-            <h1 className="heading">Flower Gallery</h1>
+        <>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 centeredSlides={true}
-                loop={true}
                 slidesPerView={'auto'}
                 coverflowEffect={{
-                    rotate: 0,
+                    rotate: 50,
                     stretch: 0,
                     depth: 100,
-                    modifier: 2.5,
+                    modifier: 1,
+                    slideShadows: true,
                 }}
-                pagination={{ el: '.swiper-pagination', clickable: true }}
-                navigation={{
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    clickable: true,
-                }}
-                modules={[EffectCoverflow, Pagination, Navigation]}
-                className="swiper_container"
+                pagination={true}
+                modules={[EffectCoverflow, Pagination]}
+                className="mySwiper"
             >
                 <SwiperSlide>
-                    <img src={slide_image_1} alt="slide_image" />
+                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_2} alt="slide_image" />
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_3} alt="slide_image" />
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_4} alt="slide_image" />
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide_image_5} alt="slide_image" />
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
                 </SwiperSlide>
-
-                <div className="slider-controler">
-                    <div className="swiper-button-prev slider-arrow">
-                        <ion-icon name="arrow-back-outline"></ion-icon>
-                    </div>
-                    <div className="swiper-button-next slider-arrow">
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </div>
-                    <div className="swiper-pagination"></div>
-                </div>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                </SwiperSlide>
             </Swiper>
-        </div>
+        </>
     );
 }
-
-export default App;
