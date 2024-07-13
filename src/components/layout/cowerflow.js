@@ -6,11 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-import './cowerflow.css';
+import './cowerflow.css'; 
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'; // Added Navigation import
 
 export default function App() {
     return (
@@ -28,7 +29,8 @@ export default function App() {
                     slideShadows: true,
                 }}
                 pagination={true}
-                modules={[EffectCoverflow, Pagination]}
+                navigation={true} // Added navigation property
+                modules={[EffectCoverflow, Pagination, Navigation]} // Corrected modules array
                 className="mySwiper"
             >
                 <SwiperSlide>
