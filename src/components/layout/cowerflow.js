@@ -6,14 +6,13 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-import slide_image_1 from '/images/1.jpg';
-import slide_image_2 from '/images/2.jpg';
-import slide_image_3 from '/images/3.jpg';
-import slide_image_4 from '/images/4.jpg';
-import slide_image_5 from '/images/5.jpg';
-
+import slide_image_1 from './images/1.jpg';
+import slide_image_2 from './images/2.png';
+import slide_image_3 from './images/3.jpg';
+import slide_image_4 from './images/4.jpg';
+import slide_image_5 from './images/5.jpg';
 
 function App() {
     return (
@@ -55,7 +54,6 @@ function App() {
                 <SwiperSlide>
                     <img src={slide_image_5} alt="slide_image" />
                 </SwiperSlide>
-
 
                 <div className="slider-controler">
                     <div className="swiper-button-prev slider-arrow">
