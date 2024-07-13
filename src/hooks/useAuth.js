@@ -8,6 +8,7 @@ function useAuth() {
         const fetchUser = async () => {
             // Example API call
             const userData = await fetchUserFromAPI();
+
             setUser(userData);
         };
 

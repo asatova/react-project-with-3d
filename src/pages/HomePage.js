@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Hero from "../components/layout/Hero";
 function HomePage() {
     return (
         <div>
-            <h1 style={{color: "red"}}>Welcome to Home Page</h1>
+            <Hero />
         </div>
     );
 }

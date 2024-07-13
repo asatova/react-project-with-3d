@@ -1,0 +1,12 @@
+.first-hero{
+    max-width: 940px;
+    margin-top: 150px;
+}
+.hero-section{
+
+    display: flex;
+    justify-content: center;
+}
+.second-hero img{
+    width: 623px;
+}
