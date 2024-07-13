@@ -27,7 +27,7 @@ const images = [
 
 export default function App() {
     const [isOpen, setIsOpen] = useState(false);
-    const [photoIndex, setPhotoIndex] = useState(0);
+    const [photoIndex, setPhotoIndex] = useState(3);
 
     const handleImageClick = (index) => {
         setPhotoIndex(index);

@@ -8,9 +8,9 @@ function Header() {
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/about">Our Vision</Link></li>
-                    <li><Link to="/about">Our Competencies</Link></li>
-                    <li><Link to="/about">Contact Us</Link></li>
+                    <li><Link to="/our-vision">Our Vision</Link></li>
+                    <li><Link to="/our-competencies">Our Competencies</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </nav>
         </div>
